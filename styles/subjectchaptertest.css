@@ -1,0 +1,67 @@
+/* for outline */
+.searchtest{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+
+}
+#biologytests{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    
+}
+.item{
+    text-align: justify;
+}
+/* For Physics chapter */
+.physicstbtn{
+    margin-left: 1000px;
+    text-align: justify;
+    text-decoration: none;
+    background-color: #f74412;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+/* for biology chapter btn */
+.biologytestsbtn{
+    margin-left: 1000px;
+    text-align: justify;
+    text-decoration: none;
+    background-color: #f74412;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+.biologytestbtn2{
+    margin-left: 975px;
+    text-align: justify;
+    text-decoration: none;
+    background-color: #f74412;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+/* for chemistry test button */
+.chemistrytestsbtn{
+    margin-left: 730px;
+    text-align: justify;
+    text-decoration: none;
+    background-color: #f74412;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+/* for english */
+.englishtestsbtn{
+    margin-left: 730px;
+    text-align: justify;
+    text-decoration: none;
+    background-color: #f74412;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
