@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Folk's Group</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="carusel.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <meta name="google-adsense-account" content="ca-pub-9896592569091681">
+
+</head>
+<body>
+    <div class="body">
+    
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Tests.html">Test</a>
+            <a href="contactpage.html">Contact </a>
+            <a href="otherpage.html">Others</a>
+            <a href="Loginpage.html" class="Login">Login</a>
+  
+        </nav>
+        <a  href="index.html"><img class="backicon" src="all images and videos/cak_icon-removebg-preview.png"></a>
+
+        <!-- Heading  -->
+        <form method="post" action="" name="contact-form">
+        <h1 class="contactheading">HAVE SOME QUESTIONS?</h1>
+        <p class="contactaddress">India: Jiyanpur, Veerampur, Sant Ravidas Nagar Bhadohi , 221308 </p>
+        <img class="contactimage" src="all images and videos/new-message.png" alt="">
+        <br>
+        <div class="allwritingcontactbox">
+        <input class="namebox_contact" type="text" name="First Name" id="" required placeholder="First Name">
+        <br>
+        <input class="namebox_contact" type="text" name="Last Name" id="" required placeholder="Last Name">
+        <br>
+        <input class="emailbox_contact" type="email" name="Email" id="" required placeholder="What's your email">
+        <br>
+        <textarea class="messagebox_contact" name="Your question" id="" cols="30" rows="10" required placeholder="Your question..."></textarea>
+        <br>
+        <input class="contact-send-button" type="submit" value="Send Message" >
+    </div>
+</form>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024  Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzJAaQWmP1JkTV9BKmvcZyuymWmxrnlYaL2VZ0RsaMVFCoDSwnHfkFdgTDkcYzgoHaBqw/exec'
+    
+        const form = document.forms['contact-form']
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thank you! your form is submitted successfully." ))
+          .then(() => { window.location.reload(); })
+          .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+
+        

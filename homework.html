@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Reveal with Animation</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>.box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid #000;
+        margin: 20px;
+        text-align: center;
+    }
+    .allbox{
+        display: flex;
+        flex-direction: row;
+    }
+    .gifimage{
+        width: 110px;
+    }
+    
+    .hidden {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+    
+    .visible {
+        opacity: 1;
+        max-height: 500px; /* Adjust based on your content's size */
+        transition: opacity 0.7s ease, max-height 0.5s ease;
+    }
+    
+    .container {
+        margin-bottom: 20px;
+        margin-right: 200px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 0 gray;
+        margin-top: 20px;
+    }
+    .nameofhomework{
+        float: left;
+    }
+    .flexchaptername{
+        display: flex;
+        flex-direction: row;
+    }
+    .chapter-name{
+        margin-right: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 20px;
+        
+    }
+    .downloadhomework{
+        text-decoration: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: relative;
+        top: 17px;
+    }
+    .downloadhomeworkppt{
+        position: relative;
+        top: 30px;
+        left: 50px;
+        background-color: burlywood;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Tests.html">Test</a>
+        <a href="contactpage.html">Contact </a>
+        <a class="other" href="otherpage.html">Others</a>
+    </nav>
+  
+        <a href="Loginpage.html" class="Login">Login</a>
+        <div class="bodyhomework">
+        <!-- Homework -->
+        <!-- Main title -->
+        <h1 class="maintitle">Summer Vacation Homework</h1>
+        <h1 class="titileofhomework">Biology</h1>
+        <!-- onesubject content -->
+        <div class="onesubjectcontent">
+        <p class="homeworkcontent">1.   Make the PPT on only one topic which you have studied</p>
+        <p class="homeworkcontent">2.   Create 20 MCQ question from all chapter which you have studied.</p>
+    </div>
+
+        <h1 class="titileofhomework">Physics</h1>
+        <!-- onesubject content -->
+        <div class="onesubjectcontent">
+        <p class="homeworkcontent">1.   Complete all Exercise question in your fair copy from chapter a. Units and Measurement b. Motion in a straight line.</p>
+    </div>
+        <h1 class="titileofhomework">English</h1>
+        <!-- onesubject content -->
+        <div class="onesubjectcontent">
+
+        </div>
+        <h1 class="titileofhomework">Hindi</h1>
+        <!-- onesubject content -->
+        <div class="onesubjectcontent">
+
+        </div>
+        <h1 class="titileofhomework">Chemistry</h1>
+        <!-- onesubject content -->
+        <div class="onesubjectcontent">
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Solution of Homework -->
+        <h1 class="maintitle">Solutions</h1>
+        <div id="buttonsContainer">
+            <div class="clickBox" data-target="hiddenElement1"><img class="subjectgif" src="all images and videos/dna.gif" alt=""></div>
+            <div class="clickBox" data-target="hiddenElement2"><img class="subjectgif" src="all images and videos/chemistry.gif" alt=""></div>
+            <div class="clickBox" data-target="hiddenElement3"><img class="subjectgif" src="all images and videos/english.gif" alt=""></div>
+            <div class="clickBox" data-target="hiddenElement4"><img class="subjectgif" src="all images and videos/newtons-cradle.gif" alt=""></div>
+        </div>
+        <!-- subject name -->
+        <div class="flexsubject">
+        <p class="nameofsubject">Biology Chemistry English Physics</p>
+    
+    </div>
+    </div>
+        
+        <div id="hiddenElement1" class="hiddenElement">
+            
+            <h1 class="nameofhomework">PPT</h1>
+            <button class="downloadhomeworkppt">Download PPT</button>
+        <br><br><br>
+        <h3>MCQ Question</h3>
+        <div class="flexchaptername">
+            <p class="chapter-name">The Living World-></p><a class="downloadhomework" href="Quiz/Biology question/Ch-1.html">Download</a>
+            <p class="chapter-name">Cell: The Unit of Life-></p><a class="downloadhomework" href="Quiz/Biology question/ch-8.html">Download</a>
+            <p class="chapter-name">Cell Cycle  Cell Division-></p><a class="downloadhomework" href="Quiz/Biology question/ch-10.html">Download</a>
+            <p class="chapter-name">Structural Organisation in Animals-></p><a class="downloadhomework" href="Quiz/Biology question/Ch-10.html">Download</a>
+        </div>
+    </div>
+        <div id="hiddenElement2" class="hiddenElement">
+            <p>This is the hidden element 2!</p>
+        </div>
+
+
+        <div id="hiddenElement3" class="hiddenElement">
+            <div class="question">
+        <p>Q.1 Create a file on TUt: The Saga Continues written by A. R Williams describe summary of the
+            chapter and biography of A.R Williams?</p>
+            <p>Q.2 Explain the topic and rules for transforming different types of sentence?</p>
+            <p>Q.3 Write the poem of yours. Read the poems in your book take idea o rhymes in the word to
+                creative?</p>
+                <p>Q.4 Write one speech and debate by choosing your favorite topic.etc.</p>
+                <p class="downloadinstruction">Download PDF solutioin with question by clicking below button!</p>
+            </div>
+            <button class="downloadbutton"><a class="linkofbutton" href="all images and videos/English Summer Vacation Homework.pdf" download="English Summer Vacation Homework">Download</button></a>
+        </div>
+
+
+        <div id="hiddenElement4" class="hiddenElement">
+            <p>This is the hidden element 4!</p>
+        </div>
+    
+        <script>document.addEventListener('DOMContentLoaded', () => {
+        const clickBoxes = document.querySelectorAll('.clickBox');
+    
+        clickBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const targetId = box.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement.classList.contains('active')) {
+                    targetElement.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.hiddenElement').forEach(el => el.classList.remove('active'));
+                    targetElement.classList.add('active');
+                }
+            });
+        });
+    });
+    </script>
+    <footer>
+        <p>&copy; 2024  Website. All rights reserved.</p>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

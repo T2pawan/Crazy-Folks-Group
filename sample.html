@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide-up {
+    display: block;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#userDetails {
+    margin-top: 20px;
+    background-color: #e7f3fe;
+    padding: 15px;
+    border: 1px solid #b3d4fc;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="userDetails" class="hidden">
+            <h3>User Details</h3>
+            <p id="userName">Name: </p>
+            <p id="userEmail">Email: </p>
+            <p id="userPhone">Phone: </p>
+        </div>
+    </div>
+    <script >document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const mobile = document.getElementById('mobile').value;
+    const password = document.getElementById('password').value;
+
+    const users = [
+        { mobile: '1234567890', password: 'password123', name: 'John Doe', email: 'john.doe@example.com', phone: '1234567890' },
+        { mobile: '0987654321', password: 'password456', name: 'Jane Smith', email: 'jane.smith@example.com', phone: '0987654321' },
+        // Add more users as needed
+    ];
+
+    const user = users.find(user => user.mobile === mobile && user.password === password);
+
+    if (user) {
+        document.getElementById('userName').textContent = `Name: ${user.name}`;
+        document.getElementById('userEmail').textContent = `Email: ${user.email}`;
+        document.getElementById('userPhone').textContent = `Phone: ${user.phone}`;
+        
+        const userDetails = document.getElementById('userDetails');
+        userDetails.classList.remove('hidden');
+        userDetails.classList.remove('slide-up');  // Reset animation
+        void userDetails.offsetWidth;  // Trigger reflow
+        userDetails.classList.add('slide-up');
+    } else {
+        alert('Incorrect mobile number or password. Please try again.');
+    }
+});
+</script>
+</body>
+</html>

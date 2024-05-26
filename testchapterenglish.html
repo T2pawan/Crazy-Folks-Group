@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Folk's Group</title>
+    <link rel="stylesheet" href="styles/subjectchaptertest.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="carusel.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <meta name="google-adsense-account" content="ca-pub-9896592569091681">
+
+</head>
+<body>
+    <div class="body">
+    
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Tests.html">Test</a>
+            <a href="contactpage.html">Contact </a>
+            <a href="otherpage.html">Others</a>
+            <a href="Loginpage.html" class="Login">Login</a>
+  
+        </nav>
+
+<style>
+    #search-box {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    #search-results {
+        list-style-type: none;
+        padding: 0;
+    }
+    .item {
+        display: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+    }
+</style>
+</head>
+<body>
+    <a  href="Tests.html"><img class="backicon" src="all images and videos/cak_icon-removebg-preview.png"></a>
+    <p id="biologytests">Choose Chapter</p>
+    <div class="margintest">
+<p class="searchtest">Search</p>
+<div class="searchbox">
+<input type="text" id="search-box" placeholder="Search Chapter Name" class="searchboxtest">
+</div>
+
+<ul id="search-results">
+    <li class="item">Chapter1 <a class="englishtestsbtn" href="testchapterphy.html" target="_blank">Start</a></li>
+    
+    
+</ul>
+</div>
+
+<script>
+document.getElementById('search-box').addEventListener('input', function() {
+    var query = this.value.toLowerCase();
+    var items = document.getElementsByClassName('item');
+
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var text = item.textContent.toLowerCase();
+        if (text.includes(query)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    }
+});
+
+document.getElementById('search-box').addEventListener('focus', function() {
+    if (this.value === '') {
+        this.placeholder = '';
+    }
+});
+
+document.getElementById('search-box').addEventListener('blur', function() {
+    if (this.value === '') {
+        this.placeholder = 'Search...';
+    }
+});
+
+</script>
+
+</body>
+</html>
+
+        
+        </body>
+        </html>
+        

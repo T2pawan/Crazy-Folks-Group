@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Folk's Group</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body class="bodyclass">
+    <div class="responsive">
+    
+    <div class="allformandimage">
+        <a  href="index.html"><img class="backicon" src="all images and videos/cak_icon-removebg-preview.png"></a>
+        <div id="logincontainer">
+            <div class="Loginname">
+            <h1 id="mainsignup">Login</h1>
+            <p class="signupnotification">Doesn't have an account yet ? <a href="signup.html">Sign Up</a></p>
+        </div>
+        <form method="post" action="" name="contact-form">
+        <p class="loginname">Username</p>
+        <input class="loginbox" type="text" name="text" id="username" placeholder="you@example.com" required >
+        <p class="loginname">Password <a href="">Forgot Password</a></p>
+        <input class="loginbox" type="password" name="Password" id="password" placeholder="Enter 8 character Password" required>
+        <br>
+        <input class="logincheckbox" type="checkbox" name="Remember me" ><a >Remember me</a>
+        <br>
+        <input class="loginbutton" type="submit" value="Login" onclick="auth()">
+        <hr class="loginline">
+        <p class="orlogin">or Login With</p>
+        <div class="google_facebook">
+        <a class="google" href="https://accounts.google.com/signin">Google</a>
+        <a class="facebook">Facebook</a>
+    </div>
+        
+    </div>
+    <div class="loginimage">
+        <img src="all images and videos/company-employees-planning-task-and-brainstorming-flat-illustration-cartoon-people-sharing-ideas-and-meeting-flat-design-modern-illustration-vector-removebg-preview.png" alt="">
+    </div>
+</div>
+</div>
+</form>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyT6MGb-o1KT7m_4BcW7NmX1iQ9sGev9Bqyo6wykZ0SIYYttABxAwz4C_derzMijF3P/exec'
+    
+        const form = document.forms['contact-form']
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thank you! your form is submitted successfully." ))
+          .then(() => { window.location.reload(); })
+          .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+
+<!-- <script>
+    function auth(){
+    var username= document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if(username=="crazyst"&&password=="filost"){
+        alert("You are successfully login on Crazy Folk's Group! Welcome "+username);  
+        window.location.assign("home.html");
+    }
+    else{
+        alert("Your username and password is wrong.Please try again later!");
+        return;
+    }
+
+}
+
+</script> -->
